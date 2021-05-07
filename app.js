@@ -16,6 +16,8 @@ const showSuccess = (controlEl) => {
   controlEl.classList.add('success');
 };
 
+// ----------------------------------------------------------
+
 // check all for input and show the result
 const checkRequired = (inputArray) => {
   inputArray.forEach((input) => {
@@ -27,9 +29,7 @@ const checkRequired = (inputArray) => {
 
 // check all for half-width characters
 const checkCharacters = (inputArray) => {
-  console.log(inputArray)
   inputArray.forEach((input) => {
-    console.log(input.value)
     if (!isValidCharacter(input.value)) 
       showError(input, `${transformText(input.id)} must be half-width alphanumeric`)
   })
@@ -63,6 +63,8 @@ const checkConfirmation = (input1, input2) => {
     showError(input2, `It must be matching with ${transformText(input1.id)}`);
   }
 };
+
+// ---------------------------------------------------------
 
 // reset classList
 const resetClassList = () => {
