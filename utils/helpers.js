@@ -14,13 +14,13 @@ const showSuccess = (element) => {
 
 // reset classList
 const resetClassList = () => {
-  const formControl = document.querySelectorAll('.form-control');
-  formControl.forEach((form) => {
+  const formControls = document.querySelectorAll('.form-control');
+  formControls.forEach((formControl) => {
     if (
-      form.classList.contains('error') ||
-      form.classList.contains('success')
+      formControl.classList.contains('error') ||
+      formControl.classList.contains('success')
     ) {
-      form.classList = 'form-control';
+      formControl.classList = 'form-control';
     }
   });
 };
@@ -34,7 +34,8 @@ const checkErrors = () => {
     }
   })
   if (formControl.every((form) => !form.classList.contains('error'))) {
-    formControl.forEach((form) => form.children[1].value = '')
+    formControl.forEach((form) => form.
+    children[1].value = '')
   }
 };
 
