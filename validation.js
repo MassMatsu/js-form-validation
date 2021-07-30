@@ -2,8 +2,8 @@ import {isValidCharacter, isValidEmail, transformText,} from './utils/utils.js';
 import {showError} from './utils/helpers.js'
 
 // check all for input and show the result
-const checkRequired = (inputArray) => {
-  inputArray.forEach((input) => {
+const checkRequired = (inputIDArray) => {
+  inputIDArray.forEach((input) => {
     if (input.value.trim() === '') {
       showError(input, `${transformText(input.id)} is required`);
     }
@@ -11,8 +11,8 @@ const checkRequired = (inputArray) => {
 };
 
 // check all for half-width characters
-const checkCharacters = (inputArray) => {
-  inputArray.forEach((input) => {
+const checkCharacters = (inputIDArray) => {
+  inputIDArray.forEach((input) => {
     if (!isValidCharacter(input.value))
       showError(
         input,

@@ -1,15 +1,15 @@
 // show input error message
-const showError = (node, message) => {
-  const controlEl = node.parentNode;
-  const errorEl = node.nextElementSibling;
+const showError = (element, message) => {
+  const controlEl = element.parentNode;
+  const errorEl = element.nextElementSibling;
   controlEl.classList.add('error');
   errorEl.innerText = message;
 };
 
 // show success outline
-const showSuccess = (controlEl) => {
+const showSuccess = (element) => {
   //const controlEl = input.parentNode;
-  controlEl.classList.add('success');
+  element.classList.add('success');
 };
 
 // reset classList
